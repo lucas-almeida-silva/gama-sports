@@ -1,0 +1,29 @@
+.input-block {
+  margin-bottom: 1.2rem;
+
+  + .input-block {
+    margin-top: .5rem;
+  }
+
+  mat-label {
+    font-size: 1.6rem;
+    display: block;
+  }
+
+  .mat-form-field {
+    width: 100%;
+
+    input {
+      font-size: 2rem;
+    }
+
+    button .mat-icon {
+      transform: scale(2);
+      margin-bottom: 1rem;
+    }
+
+    .mat-error {
+      font-size: 1.6rem;
+    }
+  }
+}

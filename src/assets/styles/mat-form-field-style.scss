@@ -1,0 +1,30 @@
+.mat-form-field {
+  width: 100%;
+
+  + .mat-form-field {
+    margin-top: .4rem;
+  }
+  
+  &:hover {
+    border: none;
+  }
+
+  mat-label {
+    font-size: 1.8rem;
+  }
+
+  input {
+    font-size: 2rem;
+  }
+
+  button .mat-icon {
+    transform: scale(1.5);
+    margin-bottom: 1rem;
+  }
+
+  .mat-error {
+    font-size: 1.6rem;
+    margin-left: -1rem;
+  }
+
+}

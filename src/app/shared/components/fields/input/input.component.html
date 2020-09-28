@@ -1,0 +1,22 @@
+<div [formGroup]="formGroup" class="input-block">
+  <mat-form-field>
+    <mat-label>{{ label }}</mat-label>
+    <input matInput 
+      [type]="type" 
+      [name]="controlName" 
+      [placeholder]="placeholder" 
+      [formControlName]="controlName" 
+    />
+    <button *ngIf="icon" mat-icon-button matSuffix (click)="onClickIcon.emit()">
+        <mat-icon class="icon" color="primary">{{icon}}</mat-icon>
+    </button>
+    <mat-error *ngIf="validationFieldService.hasError(formControl, 'required')">Campo obrigatório</mat-error>
+    <mat-error *ngIf="validationFieldService.hasError(formControl, 'minlength')">
+      O campo deve ter no mínimo {{ validationFieldService.lengthValidate(formControl, 'minlegth')}} caracteres
+    </mat-error>
+    <mat-error *ngIf="validationFieldService.hasError(formControl, 'maxlength')">
+      O campo deve ter no máximo {{ validationFieldService.lengthValidate(formControl, 'maxlength')}} caracteres
+    </mat-error>
+    <mat-error *ngIf="type == 'email' && validationFieldService.hasError(formControl, 'email')">Email inválido</mat-error>
+  </mat-form-field>
+</div>

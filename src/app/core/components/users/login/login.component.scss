@@ -1,0 +1,75 @@
+@import "../../../../../assets/styles/mat-form-field-style.scss";
+
+#login-container { 
+  height: calc(100vh - 22rem);
+  width: 100%;
+
+  .mat-card {
+    padding: 3.6rem 3rem;
+    height: 100%;
+
+    .mat-card-content > mat-label {
+      margin: 2rem auto 4.2rem;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .mat-icon {
+        transform: scale(2);
+        margin-right: 2.6rem;
+        vertical-align: top;
+      }
+
+      span {
+        font-size: 4.2rem;
+        font-weight: bold;
+      }
+    }
+
+    .mat-card-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      > button {
+        background-color: #00a54a;
+        color: #fff;
+        width: 100%;
+        height: 6rem;
+        border-radius: 0.8rem;
+        text-decoration: none;
+        outline: none;
+        font-size: 2.2rem;
+
+        &:hover {
+          background-color: #018d40;
+        }
+      }
+
+      .register {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+
+        .mat-button {
+          padding-left: 0.5rem;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 700px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 12rem);
+
+    .mat-card {
+      width: 50rem;
+      height: 45rem;
+    }
+  }
+}
