@@ -1,53 +1,50 @@
 <div id="register-container">
   <mat-card>
-    <form [formGroup]="registerForm">
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
       <mat-card-content>
         <mat-label>
-          <span>Crie sua conta grátis</span>
+          Crie sua conta grátis
         </mat-label>
 
         <mat-form-field appearance="outline">
           <mat-label>Nome Completo</mat-label>
           <input matInput type="text" formControlName="name" />
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('name'), 'required')">Campo obrigatório
-          </mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('name'), 'required')">Campo obrigatório</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>CPF</mat-label>
-          <input matInput type="text" formControlName="cpf" />
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('cpf'), 'required')">Campo obrigatório
-          </mat-error>
+          <input matInput type="text" mask="000.000.000-00" formControlName="cpf" />
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('cpf'), 'required')">Campo obrigatório</mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('cpf'), 'invalidCpf')">CPF inválido</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Data de Nascimento</mat-label>
           <input matInput type="text" formControlName="birthdate" />
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('birthdate'), 'required')">Campo
-            obrigatório</mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('birthdate'), 'required')">Campo obrigatório</mat-error>
         </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label>Sexo</mat-label>
-          <input matInput type="text" formControlName="gender" />
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('gender'), 'required')">Campo obrigatório
-          </mat-error>
-        </mat-form-field>
+        
+        <div class="gender">
+          <label>Sexo</label>
+          <mat-radio-group formControlName="gender">
+            <mat-radio-button value="F">Masculino</mat-radio-button>
+            <mat-radio-button value="M">Feminino</mat-radio-button>
+          </mat-radio-group>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('gender'), 'required')">Campo obrigatório</mat-error>
+        </div>
 
         <mat-form-field appearance="outline">
           <mat-label>Telefone</mat-label>
-          <input matInput type="text" formControlName="phone" />
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('phone'), 'phone')">Campo obrigatório
-          </mat-error>
+          <input matInput type="text" mask="(00) 00000-0000" formControlName="phone" />
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('phone'), 'required')">Campo obrigatório</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input matInput type="email" formControlName="email" />
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('email'), 'required')">Campo obrigatório
-          </mat-error>
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('email'), 'email')">Email inválido
-          </mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('email'), 'required')">Campo obrigatório</mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('email'), 'email')">Email inválido</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -56,18 +53,17 @@
           <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword">
             <mat-icon class="icon" color="primary">{{hidePassword ? 'visibility' : 'visibility_off'}}</mat-icon>
           </button>
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('password'), 'required')">Campo obrigatório
-          </mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('password'), 'required')">Campo obrigatório</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Confirme a senha</mat-label>
-          <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" />
+          <input matInput [type]="hideConfirmPassword ? 'password' : 'text'" formControlName="confirmPassword" />
           <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword">
             <mat-icon class="icon" color="primary">{{hidePassword ? 'visibility' : 'visibility_off'}}</mat-icon>
           </button>
-          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('password'), 'required')">Campo obrigatório
-          </mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('confirmPassword'), 'required')">Campo obrigatório</mat-error>
+          <mat-error *ngIf="validationFieldService.hasError(registerForm.get('confirmPassword'), 'passwordMismatch')">As senhas não coincidem</mat-error>
         </mat-form-field>
         
       </mat-card-content>

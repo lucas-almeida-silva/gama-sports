@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import ProductItem from 'src/app/core/models/ProductItem';
 import { ProductsService } from 'src/app/core/services/products.service';
+import Product from 'src/app/shared/models/Product';
 
 @Component({
   selector: 'app-products-list',
@@ -8,7 +8,7 @@ import { ProductsService } from 'src/app/core/services/products.service';
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit {
-  products: ProductItem[] = [];
+  products: Product[] = [];
 
   constructor(private productsService: ProductsService) { }
 
@@ -18,8 +18,8 @@ export class ProductsListComponent implements OnInit {
 
   getAllProducts() {
     this.productsService.getAll().subscribe(
-      (products: ProductItem[]) => {this.products = products},
-      () => alert('Ocorrer um error ao buscar os produtos')
+      (products: Product[]) => {this.products = products},
+      () => alert('Ocorreu um error ao buscar os produtos')
     );
   }
 

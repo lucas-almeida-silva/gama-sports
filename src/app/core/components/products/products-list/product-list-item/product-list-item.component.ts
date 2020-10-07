@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import ProductItem from 'src/app/core/models/ProductItem';
+import Product from 'src/app/shared/models/Product';
 
 @Component({
   selector: 'app-product-list-item',
@@ -7,14 +7,15 @@ import ProductItem from 'src/app/core/models/ProductItem';
   styleUrls: ['./product-list-item.component.scss']
 })
 export class ProductListItemComponent implements OnInit {
-  @Input() product: ProductItem;
+  @Input() product: Product;
+  @Input() name: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getInstallmentsValue(product: ProductItem) {
+  getInstallmentsValue(product: Product): number {
     return product.price / product.installments;
   }
 

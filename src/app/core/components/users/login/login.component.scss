@@ -1,6 +1,6 @@
 @import "../../../../../assets/styles/mat-form-field-style.scss";
 
-#login-container { 
+#login-container {
   height: calc(100vh - 22rem);
   width: 100%;
 
@@ -8,22 +8,24 @@
     padding: 3.6rem 3rem;
     height: 100%;
 
-    .mat-card-content > mat-label {
-      margin: 2rem auto 4.2rem;
-      
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .mat-card-content {
+      > mat-label {
+        margin: 2rem auto 4.2rem;
 
-      .mat-icon {
-        transform: scale(2);
-        margin-right: 2.6rem;
-        vertical-align: top;
-      }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      span {
-        font-size: 4.2rem;
-        font-weight: bold;
+        .mat-icon {
+          transform: scale(2);
+          margin-right: 2.6rem;
+          vertical-align: top;
+        }
+
+        span {
+          font-size: 4.2rem;
+          font-weight: bold;
+        }
       }
     }
 
@@ -52,6 +54,8 @@
       .register {
         margin-top: 1rem;
         font-size: 1.6rem;
+        text-decoration: none;
+        color: #000000;
 
         .mat-button {
           padding-left: 0.5rem;

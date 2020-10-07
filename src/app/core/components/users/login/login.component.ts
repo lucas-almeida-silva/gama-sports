@@ -10,6 +10,7 @@ import { ValidationFieldService } from 'src/app/shared/services/validation-field
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   hidePassword: boolean = true;
+  nome: string = 'nome';
 
   constructor(
     private formBuilder: FormBuilder, 
