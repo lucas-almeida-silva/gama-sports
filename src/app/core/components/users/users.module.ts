@@ -9,9 +9,10 @@ import { UserComponent } from './user.component';
 import { SharedModule } from '../../../shared/shared.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, UserComponent, ForgotPasswordComponent],
+  declarations: [LoginComponent, RegisterComponent, UserComponent, ForgotPasswordComponent, RecoverPasswordComponent],
   imports: [
     CommonModule,
     UsersRoutingModule,
