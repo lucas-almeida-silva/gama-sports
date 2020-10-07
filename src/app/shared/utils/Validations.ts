@@ -1,7 +1,8 @@
 import { AbstractControl, FormGroup } from '@angular/forms';
+import * as moment from 'moment';
 
 export default class Validations {
-  static ValidateCpf(control: AbstractControl) {
+  static validateCpf(control: AbstractControl) {
     if(control.value.length) {
       const cpf = control.value.replace(/[^\d]/g, "");
 
@@ -63,4 +64,18 @@ export default class Validations {
       }
     }
   }
+
+  static validateDate(dateControl: AbstractControl) {
+    const date = dateControl.value;
+
+    if(date) {
+      if(!(date.length === 10)) 
+        return { invalidDate: true};
+      
+      if(!moment(date, 'DD/MM/YYYY').isValid())
+        return { invalidDate: true};
+    }
+    console.log(date)
+    return null;
+  } 
 }

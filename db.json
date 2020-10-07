@@ -126,5 +126,40 @@
       "installments": 10,
       "image": "https://a-static.mlcdn.com.br/618x463/smart-tv-monitor-lg-24-led-wi-fi-webos-3-5-dtv-time-machine-ready-bivolt-24tl520s/zoo/98220/7d21b6ff5de0dd3a2d484476f0be9ac0.jpg"
     }
+  ],
+  "users": [
+    {
+      "name": "Lucas Almeida da Silva",
+      "cpf": "99528782060",
+      "birthdate": "11/02/2001",
+      "gender": "F",
+      "phone": "11993874742",
+      "email": "lucas.silva@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 1
+    },
+    {
+      "name": "Teste",
+      "cpf": "50033330808",
+      "birthdate": "10/10/2010",
+      "gender": "M",
+      "phone": "1122323444",
+      "email": "teste@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 2
+    },
+    {
+      "name": "Teste",
+      "cpf": "50321533895",
+      "birthdate": "05/01/2001",
+      "gender": "M",
+      "phone": "11967572528",
+      "email": "teste@teste.com",
+      "password": "12345",
+      "confirmPassword": "12345",
+      "id": 3
+    }
   ]
 }

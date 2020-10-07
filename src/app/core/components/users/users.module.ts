@@ -19,7 +19,7 @@ import { NgxMaskModule } from 'ngx-mask';
     FormsModule,
     SharedModule,
     MaterialModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule
   ]
 })
 export class UsersModule { }

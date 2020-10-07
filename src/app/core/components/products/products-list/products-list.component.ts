@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { ProductsService } from 'src/app/core/services/products.service';
 import Product from 'src/app/shared/models/Product';
 
@@ -10,7 +11,9 @@ import Product from 'src/app/shared/models/Product';
 export class ProductsListComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private productsService: ProductsService) { }
+  constructor(
+    private toastrService: ToastrService,
+    private productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -19,7 +22,7 @@ export class ProductsListComponent implements OnInit {
   getAllProducts() {
     this.productsService.getAll().subscribe(
       (products: Product[]) => {this.products = products},
-      () => alert('Ocorreu um error ao buscar os produtos')
+      () => this.toastrService.error("Ocorreu um erro ao buscar os produtos")
     );
   }
 

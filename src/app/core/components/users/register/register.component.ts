@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ValidationFieldService } from 'src/app/shared/services/validation-field.service';
 import Validations from 'src/app/shared/utils/Validations';
+import { UsersService } from 'src/app/core/services/users.service';
+import User from 'src/app/shared/models/User';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
+import { LoaderService } from 'src/app/shared/services/loader.service';
 
 @Component({
   selector: 'app-register',
@@ -12,21 +17,30 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   hidePassword: boolean = true;
   hideConfirmPassword: boolean = true;
+  phoneMask= "(00) 0000-0000";
+  maxDate: Date = new Date();
+  loading: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, 
-    public validationFieldService: ValidationFieldService) { }
+  constructor(
+    public validationFieldService: ValidationFieldService,
+    private formBuilder: FormBuilder, 
+    private usersService: UsersService,
+    private toastrService: ToastrService,
+    private router: Router,
+    private loaderService: LoaderService) {}
 
   ngOnInit(): void {
     this.buildForm();
+    this.setDynamicMaskForPhone();
   }
 
   buildForm() {
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
-      cpf: ['', [Validators.required, Validations.ValidateCpf]],
-      birthdate: ['', Validators.required],
+      cpf: ['', [Validators.required, Validations.validateCpf]],
+      birthdate: ['', [Validators.required, Validations.validateDate]],
       gender: ['', Validators.required],
-      phone: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.pattern('^((\(([1-9]{2})\))|([1-9]{2}))([ .-]?)(9[0-9]|[0-9])[0-9]{3}([ .-]?)[0-9]{4}$')]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
@@ -35,5 +49,23 @@ export class RegisterComponent implements OnInit {
 
   registerUser() {
     this.registerForm.markAllAsTouched();
+    
+    if(this.registerForm.valid) {
+      this.loaderService.showLoader();
+      this.usersService.postUser(this.registerForm.value as User).subscribe(
+        () => {
+          this.toastrService.success("Cadastro efetuado com sucesso! Agora basta efetuar o login e aproveitar!");
+          this.router.navigateByUrl('/users/login');
+        },
+        () => this.toastrService.error("Ocorreu um erro ao efetuar o cadastro, tente novamente."),
+        () => this.loaderService.hideLoader()
+      );
+    }
+  }
+
+  setDynamicMaskForPhone() {
+    this.registerForm.controls.phone.valueChanges.subscribe(value => {
+      this.phoneMask = (value.length < 11)? "(00) 0000-00009": "(00) 00000-0000";
+    });
   }
 }

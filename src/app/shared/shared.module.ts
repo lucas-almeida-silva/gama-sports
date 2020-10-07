@@ -6,9 +6,10 @@ import { SimpleTopBarComponent } from './components/simple-top-bar/simple-top-ba
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
-  declarations: [SimpleTopBarComponent, TopBarComponent, FooterComponent],
+  declarations: [SimpleTopBarComponent, TopBarComponent, FooterComponent, LoaderComponent],
   imports: [
     CommonModule,
     MaterialModule,
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     SimpleTopBarComponent,
     TopBarComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

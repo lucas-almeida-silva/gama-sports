@@ -6,6 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import { NgxMaskModule } from 'ngx-mask';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     SharedModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
