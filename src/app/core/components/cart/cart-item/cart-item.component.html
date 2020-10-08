@@ -6,19 +6,18 @@
   <div class="quantity-values">
     <div class="product-quantity">
       <div class="quantity">
-        <button mat-fab color="primary">
+        <button mat-fab color="primary" (click)="increaseQuantity()">
           <mat-icon>add</mat-icon>
         </button>
         <input type="number" [value]="cartItem.quantity" readonly>
-        <button mat-fab color="primary">
+        <button mat-fab color="primary" (click)="decreaseQuantity()" [disabled]="cartItem.quantity === 1">
           <mat-icon>remove</mat-icon>
         </button>
       </div>
       <button mat-button color="warn" (click)="removeCartItem()">Remover</button>
     </div>
     
-    <div class="values">
-      <strong class="total-value">{{(cartItem.product.price * cartItem.quantity) | currency:'BRL'}}</strong>
-    </div>
+    <span class="unit-value">Valor unitário</span>
+    <strong class="total-value">{{(cartItem.product.price * cartItem.quantity) | currency:'BRL'}}</strong>
   </div>
 </div>

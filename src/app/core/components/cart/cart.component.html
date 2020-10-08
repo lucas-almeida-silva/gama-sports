@@ -5,6 +5,7 @@
       <mat-label>Meu carrinho</mat-label>
       <mat-divider></mat-divider>
       <span class="empty-cart" *ngIf="!cartItems.length">Carrinho vazinho</span>
+      <app-cart-items-header></app-cart-items-header>
       <div class="cart-items">
         <div class="item" *ngFor="let cartItem of cartItems; index as index" >
           <app-cart-item [cartItem]="cartItem"></app-cart-item>

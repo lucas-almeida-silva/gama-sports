@@ -28,13 +28,11 @@
       }
 
       .cart-items {
-        margin-top: 5rem;
-
         .item {
-          margin-top: 4rem;
-      
+          margin-top: 3rem;
+
           .mat-divider {
-            margin-top: 2rem;
+            margin-top: 1rem;
           }
         }
       }
@@ -85,10 +83,29 @@
     }
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     .mat-card {
       max-width: 1110px;
       margin: 4rem auto;
+      padding: 3rem 4rem;
+
+      .mat-card-content { 
+        .cart-items, .total {
+          padding: 0rem 2rem;
+        }
+
+        // .total {
+        //   padding: 1rem;
+        // }
+      }
+
+      .mat-card-actions {
+        padding: 0 2.6rem;
+  
+        button {
+          width: 20%;
+        }
+      }
     }
   }
   

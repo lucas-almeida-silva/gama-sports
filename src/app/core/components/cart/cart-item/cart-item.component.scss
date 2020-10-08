@@ -59,12 +59,36 @@
         }
       }
     } 
+
+    .unit-value {
+      display: none;
+    }
   }
 
-  .values {
     .total-value {
       font-size: 1.8rem;
       font-weight: bold;
+    }
+  
+
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+
+
+    .quantity-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0;
+      align-self: center;
+
+      .product-quantity {
+        justify-self: flex-start;
+      }
+
+      .unit-value {
+        display: initial;
+      }
     }
   }
 

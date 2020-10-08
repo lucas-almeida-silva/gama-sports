@@ -1,0 +1,29 @@
+.cart-items-header{
+  background-color: #CCC;
+  height: 4.2rem;
+  display: none;
+  margin: 0 2rem;
+
+  ul {
+    list-style: none;
+    height: 100%;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // justify-content: space-between;
+    margin-top: 6.4rem;
+    display: grid;
+    grid-template-columns: 4fr repeat(3, 1fr);
+
+    li {
+      text-align: left;
+      align-self: center;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    display: block;
+  }
+}

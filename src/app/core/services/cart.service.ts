@@ -9,7 +9,7 @@ export class CartService {
     {
       product: 
       {
-        id: 17, 
+        id: 1, 
         description: 'TV 43 Polegadas Samsung', 
         installments: 10, 
         price: 1999.99, 
@@ -25,7 +25,7 @@ export class CartService {
     {
       product: 
       {
-        id: 17, 
+        id: 2, 
         description: 'TV 43 Polegadas Samsung', 
         installments: 10, 
         price: 1999.99, 
@@ -41,7 +41,7 @@ export class CartService {
     {
       product: 
       {
-        id: 17, 
+        id: 3, 
         description: 'TV 43 Polegadas Samsung', 
         installments: 10, 
         price: 1999.99, 
@@ -60,14 +60,19 @@ export class CartService {
     this.products.push({product: product, quantity: 1});
   }
 
+  increaseQuantity(productId: number, quantity: number) {
+    const index = this.products.findIndex(x => x.product.id === productId);
+    this.products[index].quantity += quantity;
+  }
+
+  decreaseQuantity(productId: number, quantity: number) {
+    const index = this.products.findIndex(x => x.product.id === productId);
+    this.products[index].quantity -= quantity;
+  }
+
   removeItem(id: number){
     const index = this.products.findIndex(x => x.product.id == id);
     this.products.splice(index, 1);
-  }
-
-  updateQuantity(productId: number, quantity: number) {
-    const index = this.products.findIndex(x => x.product.id === productId);
-    this.products[index].quantity += quantity;
   }
 
   getCartItems(){
