@@ -12,6 +12,10 @@
     @media(min-width: 700px) {
       flex: 1;
       margin: 0 auto; 
+
+      a {
+        padding: 0;
+      }
     }
   }
   

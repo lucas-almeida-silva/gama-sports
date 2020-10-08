@@ -51,14 +51,15 @@ export class RegisterComponent implements OnInit {
     this.registerForm.markAllAsTouched();
     
     if(this.registerForm.valid) {
-      this.loaderService.showLoader();
-      this.usersService.postUser(this.registerForm.value as User).subscribe(
+      const user = this.registerForm.value as User;
+      delete user['confirmPassword'];
+
+      this.usersService.postUser(user).subscribe(
         () => {
           this.toastrService.success("Cadastro efetuado com sucesso! Agora basta efetuar o login e aproveitar!");
           this.router.navigateByUrl('/users/login');
         },
         () => this.toastrService.error("Ocorreu um erro ao efetuar o cadastro, tente novamente."),
-        () => this.loaderService.hideLoader()
       );
     }
   }

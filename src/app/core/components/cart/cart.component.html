@@ -1,0 +1,24 @@
+<div id="cart-container">
+  <app-simple-top-bar></app-simple-top-bar>
+  <mat-card>
+    <mat-card-content>
+      <mat-label>Meu carrinho</mat-label>
+      <mat-divider></mat-divider>
+      <span class="empty-cart" *ngIf="!cartItems.length">Carrinho vazinho</span>
+      <div class="cart-items">
+        <div class="item" *ngFor="let cartItem of cartItems; index as index" >
+          <app-cart-item [cartItem]="cartItem"></app-cart-item>
+          <mat-divider></mat-divider>
+        </div>
+      </div> 
+      <div class="total" *ngIf="cartItems.length">
+        <strong>Total</strong>
+        <strong>{{getTotal() | currency:'BRL'}}</strong>
+      </div>  
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>{{cartItems.length ? 'Comprar mais' : 'Voltar'}}</button>
+      <button mat-button *ngIf="cartItems.length">Concluir compra</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

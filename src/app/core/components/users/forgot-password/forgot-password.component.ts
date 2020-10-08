@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailValidator, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ValidationFieldService } from 'src/app/shared/services/validation-field.service';
 
 @Component({
@@ -12,7 +14,9 @@ export class ForgotPasswordComponent implements OnInit {
 
   constructor(
     public validationFieldService: ValidationFieldService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private toastrService: ToastrService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.buildForm();
@@ -22,5 +26,14 @@ export class ForgotPasswordComponent implements OnInit {
     this.forgotPasswordForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]]
     });
+  }
+
+  sendEmail() {
+    this.forgotPasswordForm.markAllAsTouched();
+
+    if(this.forgotPasswordForm.valid) {
+      this.toastrService.success("Confira o seu e-mail para recuperar seu acesso");
+      this.router.navigateByUrl('/users/login');
+    }
   }
 }
