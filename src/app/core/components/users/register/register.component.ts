@@ -24,9 +24,9 @@ export class RegisterComponent implements OnInit {
   constructor(
     public validationFieldService: ValidationFieldService,
     private formBuilder: FormBuilder, 
-    private usersService: UsersService,
-    private toastrService: ToastrService,
     private router: Router,
+    private toastrService: ToastrService,
+    private usersService: UsersService,
     private loaderService: LoaderService) {}
 
   ngOnInit(): void {

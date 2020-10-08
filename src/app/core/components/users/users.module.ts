@@ -8,8 +8,8 @@ import { MaterialModule } from '../../../material.module';
 import { UserComponent } from './user.component';
 import { SharedModule } from '../../../shared/shared.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { NgxMaskModule } from 'ngx-mask';
 import { RecoverPasswordComponent } from './recover-password/recover-password.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, UserComponent, ForgotPasswordComponent, RecoverPasswordComponent],
@@ -20,7 +20,7 @@ import { RecoverPasswordComponent } from './recover-password/recover-password.co
     FormsModule,
     SharedModule,
     MaterialModule,
-    NgxMaskModule
+    NgxMaskModule.forChild()
   ]
 })
 export class UsersModule { }
