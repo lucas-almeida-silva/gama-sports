@@ -20,7 +20,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   getAllProducts() {
-    this.productsService.getAll().subscribe(
+    this.productsService.getAllProducts().subscribe(
       (products: Product[]) => {this.products = products},
       () => this.toastrService.error("Ocorreu um erro ao buscar os produtos")
     );

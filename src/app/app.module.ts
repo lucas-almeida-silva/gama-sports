@@ -9,6 +9,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxMaskModule } from 'ngx-mask';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
     MaterialModule,
     HttpClientModule,
     NgxMaskModule.forRoot(),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgImageSliderModule
+
   ],
   providers: [
     {

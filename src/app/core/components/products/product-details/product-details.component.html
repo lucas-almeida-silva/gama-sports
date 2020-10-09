@@ -1,3 +1,27 @@
 <div id="product-details-container">
-  
+  <mat-card>
+    <mat-card-content>
+      <img [src]="image" (click)="showImagesPopup()">
+
+      <div style="max-width: 30rem;">
+        <ng-image-slider #nav
+          (imageClick)="changeImage($event)"
+          [images]="imageObject"
+          [infinite]="false"
+          [autoSlide]="1"
+          [imagePopup]="false"
+          [imageSize]="{width: '30%', height: 120}"
+          style="cursor: pointer;"
+          slideImage="1"></ng-image-slider>
+      </div>
+      
+
+      <strong>{{product.description}}</strong>
+      <mat-divider></mat-divider>
+      <strong>{{product.price | currency: 'BRL'}}</strong>
+    </mat-card-content>
+  </mat-card>
+
+
+
 </div>

@@ -5,7 +5,19 @@
       "description": "Camisa Barcelona Rakuten",
       "price": 399.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
+      "images": [
+        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
+        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
+        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
+        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
+        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      ],
+      "size": "G",
+      "gender": "M",
+      "material": "Tecido",
+      "color": "Vermelha com azul",
+      "brand": "Nike"
     },
     {
       "id": 2,
