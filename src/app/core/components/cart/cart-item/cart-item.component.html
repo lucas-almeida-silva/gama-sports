@@ -17,7 +17,7 @@
       <button mat-button color="warn" (click)="removeCartItem()">Remover</button>
     </div>
     
-    <span class="unit-value">Valor unitário</span>
+    <span class="unit-value">{{cartItem.product.price | currency:'BRL'}}</span>
     <strong class="total-value">{{(cartItem.product.price * cartItem.quantity) | currency:'BRL'}}</strong>
   </div>
 </div>

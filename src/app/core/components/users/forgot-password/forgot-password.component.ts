@@ -33,7 +33,7 @@ export class ForgotPasswordComponent implements OnInit {
 
     if(this.forgotPasswordForm.valid) {
       this.toastrService.success("Confira o seu e-mail para recuperar seu acesso");
-      this.router.navigateByUrl('/users/login');
+      this.router.navigateByUrl('/users/recover-password');
     }
   }
 }

@@ -6,12 +6,13 @@
     
     img {
       width: 10rem;
-      height: 10rem;
+      height: 12rem;
     }
 
     .description {
       max-height: 90%;
       margin-left: 2rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -44,7 +45,7 @@
   
         input {
           margin: 0 .5rem;
-          width: 4rem;
+          width: 3.4rem;
           height: 3rem;
           text-align: center;
           border: 1px solid #CCC;
@@ -62,25 +63,31 @@
 
     .unit-value {
       display: none;
+      font-size: 1.8rem;
     }
   }
 
     .total-value {
       font-size: 1.8rem;
-      font-weight: bold;
     }
   
 
-  @media (min-width: 800px) {
+  @media (min-width: 900px) {
     display: grid;
     grid-template-columns: 1.35fr 1fr;
+
+    .product-info {
+      .description {
+        max-width: 70%;
+      }
+    }
 
 
     .quantity-values {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       margin: 0;
-      align-self: center;
+      align-self: flex-start;
 
       .product-quantity {
         justify-self: flex-start;
@@ -88,6 +95,13 @@
 
       .unit-value {
         display: initial;
+        align-self: flex-start;
+        margin-top: .6rem;
+      }
+
+      .total-value {
+        align-self: flex-start;
+        margin-top: .6rem;
       }
     }
   }

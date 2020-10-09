@@ -10,14 +10,14 @@ export class CartService {
       product: 
       {
         id: 1, 
-        description: 'TV 43 Polegadas Samsung', 
+        description: 'Camisa Barcelona Rakuten', 
         installments: 10, 
         price: 1999.99, 
-        image: 'https://a-static.mlcdn.com.br/618x463/smart-tv-monitor-lg-24-led-wi-fi-webos-3-5-dtv-time-machine-ready-bivolt-24tl520s/zoo/98220/7d21b6ff5de0dd3a2d484476f0be9ac0.jpg',
+        image: 'https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg',
         size: 'M',
         gender: 'Masculino',
         material: 'Tecido',
-        color: 'Green',
+        color: 'Granado',
         brand: 'Nike',
       }, 
       quantity: 1
@@ -26,14 +26,14 @@ export class CartService {
       product: 
       {
         id: 2, 
-        description: 'TV 43 Polegadas Samsung', 
+        description: 'Camisa Barcelona Rakuten', 
         installments: 10, 
         price: 1999.99, 
-        image: 'https://a-static.mlcdn.com.br/618x463/smart-tv-monitor-lg-24-led-wi-fi-webos-3-5-dtv-time-machine-ready-bivolt-24tl520s/zoo/98220/7d21b6ff5de0dd3a2d484476f0be9ac0.jpg',
+        image: 'https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg',
         size: 'M',
         gender: 'Masculino',
         material: 'Tecido',
-        color: 'Green',
+        color: 'Granado',
         brand: 'Nike',
       }, 
       quantity: 1
@@ -42,14 +42,14 @@ export class CartService {
       product: 
       {
         id: 3, 
-        description: 'TV 43 Polegadas Samsung', 
+        description: 'Camisa Barcelona Rakuten', 
         installments: 10, 
         price: 1999.99, 
-        image: 'https://a-static.mlcdn.com.br/618x463/smart-tv-monitor-lg-24-led-wi-fi-webos-3-5-dtv-time-machine-ready-bivolt-24tl520s/zoo/98220/7d21b6ff5de0dd3a2d484476f0be9ac0.jpg',
+        image: 'https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg',
         size: 'M',
         gender: 'Masculino',
         material: 'Tecido',
-        color: 'Green',
+        color: 'Granado',
         brand: 'Nike',
       }, 
       quantity: 1
