@@ -1,27 +1,80 @@
 <div id="product-details-container">
-  <mat-card>
+  <mat-card class="image-card">
     <mat-card-content>
-      <img [src]="image" (click)="showImagesPopup()">
-
-      <div style="max-width: 30rem;">
-        <ng-image-slider #nav
-          (imageClick)="changeImage($event)"
-          [images]="imageObject"
-          [infinite]="false"
-          [autoSlide]="1"
-          [imagePopup]="false"
-          [imageSize]="{width: '30%', height: 120}"
-          style="cursor: pointer;"
-          slideImage="1"></ng-image-slider>
+      <div class="product-images">
+        <img class="image" [src]="image" (click)="showImagesPopup()">
+        <div class="slider">
+          <ng-image-slider #nav
+            (imageClick)="changeImage($event)"
+            [images]="imageObject"
+            [infinite]="true"
+            [autoSlide]="0"
+            [imagePopup]="false"
+            [imageSize]="{width: '25%', height: 120}"
+            style="cursor: pointer;"
+            slideImage="1">
+          </ng-image-slider>
+        </div>
       </div>
-      
 
-      <strong>{{product.description}}</strong>
+      <!-- <strong>{{product.images}}</strong>
       <mat-divider></mat-divider>
-      <strong>{{product.price | currency: 'BRL'}}</strong>
+      <strong>{{product.price | currency: 'BRL'}}</strong> -->
     </mat-card-content>
   </mat-card>
 
+  <mat-divider></mat-divider>
+
+  <mat-card class="buy-card">
+    <mat-card-content>
+      <strong class="description">{{product.description}}</strong>
+      <div class="price">
+        <strong class="total-value">{{product.price | currency:'BRL'}}</strong>
+        <span class="installments">{{ product.installments }}x de {{getInstallmentsValue(product) | currency:'BRL'}}</span>
+      </div>
+      <div class="freight">
+        <strong>Frete</strong>
+        <strong>Grátis</strong>
+      </div>
+      <div class="delivery">
+        <strong>Prazo de entrega</strong>
+        <span>7 dias</span>
+      </div>
+      <span class="responsible">Vendido e entregue por Gama Sports</span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Comprar</button>
+      <button mat-button color="primary">Adicionar ao carrinho</button>
+    </mat-card-actions>
+  </mat-card>
+  
+  <mat-card class="product-info-card">
+    <mat-card-content>
+      <strong class="title">Informações Adicionais</strong>
+      <table>
+        <tr>
+          <th>Tamanho</th>
+          <td>{{product.size}}</td>
+        </tr>
+        <tr>
+          <th>Gênero</th>
+          <td>{{product.gender}}</td>
+        </tr>
+        <tr>
+          <th>Material</th>
+          <td>{{product.material}}</td>
+        </tr>
+        <tr>
+          <th>Cor</th>
+          <td>{{product.color}}</td>
+        </tr>
+        <tr>
+          <th>Brand</th>
+          <td>{{product.brand}}</td>
+        </tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
 
 
 </div>
