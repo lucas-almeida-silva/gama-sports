@@ -1,27 +1,85 @@
-# GamaSports
+# Game Sports
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+# :page_with_curl: Table of Contents
 
-## Development server
+* [About](#information_source-about)
+* [Technologies](#computer-technologies)
+* [Features](#rocket-features)
+* [How to run](#seedling-how-to-run)
+* [Developers](#man_technologist-developers)
+* [License](#pencil-license)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# :information_source: About
 
-## Code scaffolding
+This is a project for a virtual sporting goods store, developed for the Web Programming discipline, offered by Fatec Ipiranga in the Systems Analysis and Development course.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# :computer: Technologies
 
-## Build
+### 📦 API
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  - Json-Server
 
-## Running unit tests
+### :desktop_computer: Front-end
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  - Angular 10
+  - Angular Material
+  - Sass
+  
+# :rocket: Features
 
-## Running end-to-end tests
+  - List of products
+  - Products search
+  - View the details of a product
+  - Handling of the cart (adding items, removing items and increasing and decreasing the quantity of an item)
+  - Register
+  - Login
+  - Password recovery
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# :seedling: How to run
 
-## Further help
+```bash
+# Clone Repository
+$ git clone https://github.com/lucas-almeida-silva/game-sports.git
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+You need to have Angular CLI installed.
+
+```bash
+# Install Angular CLI
+$ npm install -g angular-cli
+```
+
+### 📦 Run API
+
+```bash
+# Go to project folder
+$ cd gama-sports
+
+# Install Dependencies
+$ npm install
+
+# Run back-end
+$ json-server --watch db.json
+```
+Access API at http://localhost:3000/
+
+### :computer: Run Application
+
+```bash
+# Go to web folder
+$ cd proffy/web
+
+# Run Aplication
+$ ng serve
+```
+Access the application at http://localhost:4200/
+
+# :man_technologist: Developers
+  
+  - [Lucas Almeida](https://github.com/lucas-almeida-silva)
+  - [Leonardo Silva](https://github.com/)
+  - [Bruno Hyoji](https://github.com/)
+
+# :pencil: License
+
+This project is under the [MIT license](LICENSE).
