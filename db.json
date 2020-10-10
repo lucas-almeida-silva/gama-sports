@@ -13,8 +13,13 @@
         "assets/images/products/tshirt-fcb-m-05.jpg"
       ],
       "sizes": "P, M, G e GG",
-      "availableSizes": ["P", "M", "G", "GG"],
-      "gender": "P, M, G e GG",
+      "availableSizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
+      "gender": "M",
       "material": "Tecido",
       "color": "Vermelho com azul",
       "brand": "Nike"
@@ -31,7 +36,12 @@
         "assets/images/products/tshirt-chelsea-f-04.jpg"
       ],
       "sizes": "P, M, G e GG",
-      "availableSizes": ["P", "M", "G", "GG"],
+      "availableSizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
       "gender": "F",
       "material": "Tecido",
       "color": "Azul com cinza",
@@ -48,7 +58,12 @@
         "assets/images/products/tshirt-brasil-m-03.jpg"
       ],
       "sizes": "P, M, G e GG",
-      "availableSizes": ["P", "M", "G", "GG"],
+      "availableSizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
       "gender": "M",
       "material": "Tecido",
       "color": "Amarelo e Verde",
@@ -63,10 +78,14 @@
         "assets/images/products/tshirt-rmadrid-m-01.jpg",
         "assets/images/products/tshirt-rmadrid-m-02.jpg",
         "assets/images/products/tshirt-rmadrid-m-03.jpg"
-
       ],
       "sizes": "P, M, G e GG",
-      "availableSizes": ["P", "M", "G", "GG"],
+      "availableSizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
       "gender": "M",
       "material": "Tecido",
       "color": "Branco",
@@ -85,7 +104,14 @@
         "assets/images/products/footbal-boot-nike-mercurial-05.jpg"
       ],
       "sizes": "37, 38, 39, 40, 41 e 42",
-      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "availableSizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "gender": "M",
       "material": "Couro",
       "color": "Laranja",
@@ -104,7 +130,14 @@
         "assets/images/products/footbal-boot-nike-phantom-05.jpg"
       ],
       "sizes": "37, 38, 39, 40, 41 e 42",
-      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "availableSizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "gender": "M",
       "material": "Couro",
       "color": "Preto e laranja",
@@ -123,7 +156,14 @@
         "assets/images/products/footbal-boot-adidas-predator-05.jpg"
       ],
       "sizes": "37, 38, 39, 40, 41 e 42",
-      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "availableSizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "gender": "M",
       "material": "Couro",
       "color": "preto",
@@ -143,7 +183,14 @@
         "assets/images/products/footbal-boot-puma-spirit-06.jpg"
       ],
       "sizes": "37, 38, 39, 40, 41 e 42",
-      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "availableSizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "gender": "M",
       "material": "Couro",
       "color": "Laranja e preto",
@@ -161,7 +208,12 @@
         "assets/images/products/tshirt-fitness-adams-m-04.jpg"
       ],
       "sizes": "P, M, G e GG",
-      "availableSizes": ["P", "M", "G", "GG"],
+      "availableSizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
       "gender": "M",
       "material": "Tecido",
       "color": "Preto",
@@ -179,7 +231,12 @@
         "assets/images/products/shorts-fitness-rum-f-04.jpg"
       ],
       "sizes": "P, M, G e GG",
-      "availableSizes": ["P", "M", "G", "GG"],
+      "availableSizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
       "gender": "F",
       "material": "Tecido",
       "color": "Lilás",
@@ -198,7 +255,14 @@
         "assets/images/products/sneaker-olympikus-swift-f-05.jpg"
       ],
       "sizes": "37, 38, 39, 40, 41 e 42",
-      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "availableSizes": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
       "gender": "F",
       "material": "Tecido",
       "color": "Colorido",
@@ -216,7 +280,12 @@
         "assets/images/products/shorts-adams-futaw-m-04.jpg"
       ],
       "sizes": "P, M, G e GG",
-      "availableSizes": ["P", "M", "G", "GG"],
+      "availableSizes": [
+        "P",
+        "M",
+        "G",
+        "GG"
+      ],
       "gender": "M",
       "material": "Malha",
       "color": "Preto",
@@ -225,37 +294,14 @@
   ],
   "users": [
     {
-      "name": "Lucas Almeida da Silva",
-      "cpf": "99528782060",
-      "birthdate": "11/02/2001",
+      "name": "João da Silva",
+      "cpf": "15674930090",
+      "birthdate": "10/05/1997",
       "gender": "F",
-      "phone": "11993874742",
-      "email": "lucas.silva@gmail.com",
-      "password": "12345",
-      "confirmPassword": "12345",
+      "phone": "11934873493",
+      "email": "joao.silva@gmai.com",
+      "password": "12345678",
       "id": 1
-    },
-    {
-      "name": "Teste",
-      "cpf": "50033330808",
-      "birthdate": "10/10/2010",
-      "gender": "M",
-      "phone": "1122323444",
-      "email": "teste@gmail.com",
-      "password": "1234",
-      "confirmPassword": "1234",
-      "id": 2
-    },
-    {
-      "name": "Teste",
-      "cpf": "50321533895",
-      "birthdate": "05/01/2001",
-      "gender": "M",
-      "phone": "11967572528",
-      "email": "teste@teste.com",
-      "password": "12345",
-      "confirmPassword": "12345",
-      "id": 3
     }
   ]
 }

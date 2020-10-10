@@ -13,7 +13,6 @@ const routes: Routes = [
       { path: 'details/:id', component: ProductDetailsComponent }
     ]
   }
-  // { path: '**', redirectTo: '/'}
 ];
 
 @NgModule({
