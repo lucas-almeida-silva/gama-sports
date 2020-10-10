@@ -1,7 +1,10 @@
 <div class="cart-item">
   <div class="product-info">
     <img [src]="cartItem.product.images[0]" />
-    <span class="description">{{cartItem.product.description}}</span>
+    <div class="description-size">
+      <span class="description">{{cartItem.product.description}}</span>
+      <span class="product-size"><strong>Tamanho: </strong>{{cartItem.size}}</span>
+    </div>
   </div>
   <div class="quantity-values">
     <div class="product-quantity">

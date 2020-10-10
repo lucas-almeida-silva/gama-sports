@@ -13,9 +13,8 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartService.productsSubject.subscribe(
-      (total) => this.total = total.length
-    )
-    
-  }
 
+      (cartItems) => this.total = cartItems.reduce((sum, cartItem) => sum + cartItem.quantity, 0)
+    ) 
+  }
 }

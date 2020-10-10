@@ -21,7 +21,7 @@ export class CartComponent implements OnInit {
   }
 
   getTotal(): number {
-    return this.cartItems.reduce((accumulator, cartItem) => accumulator + (cartItem.product.price * cartItem.quantity), 0);
+    return this.cartItems.reduce((sum, cartItem) => sum + (cartItem.product.price * cartItem.quantity), 0);
   }
 
   checkout(): void {

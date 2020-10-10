@@ -5,6 +5,7 @@ import { ProductsService } from 'src/app/core/services/products.service';
 import Product from 'src/app/shared/models/Product';
 import { NgImageSliderComponent } from 'ng-image-slider';
 import { CartService } from 'src/app/core/services/cart.service';
+import { ValidationFieldService } from 'src/app/shared/services/validation-field.service';
 
 @Component({
   selector: 'app-product-details',
@@ -14,6 +15,7 @@ import { CartService } from 'src/app/core/services/cart.service';
 export class ProductDetailsComponent implements OnInit {
   product: Product = new Product();
   image: string;
+  productSize: string;
   @ViewChild('nav') slider: NgImageSliderComponent;
 
   imageObject: Array<object> = [];
@@ -61,13 +63,27 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart() {
-    this.cartService.addToCart(this.product);
+    if(!this.verifyProductSize())
+      return;
+
+    this.cartService.addToCart(this.product, this.productSize);
     this.toastrService.success('Produto adicionado ao carrinho!');
   }
 
   buyProduct() {
-    this.cartService.addToCart(this.product);
+    if(!this.verifyProductSize())
+      return;
+
+    this.cartService.addToCart(this.product, this.productSize);
     this.router.navigateByUrl('/cart');
+  }
+
+  verifyProductSize() {
+    if(!this.productSize) {
+      this.toastrService.warning("Selecione o tamanho antes de continuar!");
+      return false;
+    }
+    return true;
   }
 
 }

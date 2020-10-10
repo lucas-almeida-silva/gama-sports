@@ -3,16 +3,29 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    height: 100%;
     
     img {
       width: 10rem;
       height: 12rem;
     }
 
-    .description {
-      max-height: 90%;
+    .description-size {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       margin-left: 2rem;
-      font-size: 1.8rem;
+      height: 100%;
+
+      .description {
+        max-height: 90%;
+        font-size: 1.8rem;
+      }
+
+      .product-size {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 

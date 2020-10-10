@@ -40,7 +40,6 @@
           <input matInput type="text" [mask]="phoneMask" formControlName="phone" />
           <mat-error *ngIf="validationFieldService.hasError(registerForm.get('phone'), 'required')">Campo obrigatório</mat-error>
           <mat-error *ngIf="validationFieldService.hasError(registerForm.get('phone'), 'pattern')">Telefone inválido</mat-error>
-
         </mat-form-field>
 
         <mat-form-field appearance="outline">

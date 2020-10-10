@@ -79,6 +79,21 @@
       .responsible {
         font-size: 1.8rem;
       }
+
+      .size {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          font-size: 2rem;
+          margin: 3rem 0 1.4rem 0;
+        }
+
+        .mat-radio-button {
+          margin-right: 1.2rem;
+          font-size: 1.6rem;
+        }
+      }
       
       .mat-card-actions {
         margin-top: 2rem;

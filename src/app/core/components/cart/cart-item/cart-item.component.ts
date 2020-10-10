@@ -17,15 +17,15 @@ export class CartItemComponent implements OnInit {
   }
   
   increaseQuantity() {
-    this.cartService.increaseQuantity(this.cartItem.product.id, 1)
+    this.cartService.increaseQuantity(this.cartItem.product.id, 1, this.cartItem.size);
   }
 
   decreaseQuantity() {
-    this.cartService.decreaseQuantity(this.cartItem.product.id, 1)
+    this.cartService.decreaseQuantity(this.cartItem.product.id, 1, this.cartItem.size);
   }
 
   removeCartItem() {
-    this.cartService.removeItem(this.cartItem.product.id)
+    this.cartService.removeItem(this.cartItem.product.id, this.cartItem.size);
   }
 
   addCart
