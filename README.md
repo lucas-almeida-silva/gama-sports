@@ -1,4 +1,4 @@
-# Game Sports
+# Gama Sports
 
 # :page_with_curl: Table of Contents
 
