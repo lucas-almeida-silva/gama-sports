@@ -10,6 +10,8 @@ import { NgxMaskModule } from 'ngx-mask';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { MatPaginatorIntlBR } from './shared/utils/MatPaginatorIntlBR';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,10 @@ import { NgImageSliderModule } from 'ng-image-slider';
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingInterceptor,
       multi: true
+    },
+    { 
+      provide: MatPaginatorIntl, 
+      useClass: MatPaginatorIntlBR
     }
   ],
   bootstrap: [AppComponent]

@@ -1,5 +1,14 @@
 <div id="products-list">
-    <div class="products-items" *ngFor="let product of products">
-        <app-product-list-item [product]="product"></app-product-list-item>
-    </div>
+  <div class="products-items" *ngFor="let product of products">
+    <app-product-list-item [product]="product"></app-product-list-item>
+  </div>
+  <mat-paginator 
+    [length]="100" 
+    [pageSize]="10" 
+    [pageSizeOptions]="[20, 30, 40, 50]"
+    firstPageLabel="Primeira"
+    lastPageLabel="Última"
+    itemsPerPageLabel="Itens por página"
+  >
+  </mat-paginator>
 </div>

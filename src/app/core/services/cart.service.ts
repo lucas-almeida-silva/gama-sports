@@ -1,88 +1,51 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import CartItem from 'src/app/shared/models/CartItem';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  products: CartItem[] = [
-    {
-      product: 
-      {
-        id: 1, 
-        description: 'Camisa Barcelona Rakuten', 
-        installments: 10, 
-        price: 1999.99, 
-        image: 'https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg',
-        size: 'M',
-        gender: 'Masculino',
-        material: 'Tecido',
-        color: 'Granado',
-        brand: 'Nike',
-      }, 
-      quantity: 1
-    },
-    {
-      product: 
-      {
-        id: 2, 
-        description: 'Camisa Barcelona Rakuten', 
-        installments: 10, 
-        price: 1999.99, 
-        image: 'https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg',
-        size: 'M',
-        gender: 'Masculino',
-        material: 'Tecido',
-        color: 'Granado',
-        brand: 'Nike',
-      }, 
-      quantity: 1
-    },
-    {
-      product: 
-      {
-        id: 3, 
-        description: 'Camisa Barcelona Rakuten', 
-        installments: 10, 
-        price: 1999.99, 
-        image: 'https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg',
-        size: 'M',
-        gender: 'Masculino',
-        material: 'Tecido',
-        color: 'Granado',
-        brand: 'Nike',
-      }, 
-      quantity: 1
-    }
-  ]
+  products: CartItem[] =  [];
+  productsSubject = new BehaviorSubject<CartItem[]>([]);
   
   addToCart(product){
-    this.products.push({product: product, quantity: 1});
+    const cartItem = this.products.find(p => p.product.id === product.id);
+
+    if(cartItem) {
+      this.increaseQuantity(cartItem.product.id, 1);
+    } 
+    else {
+      this.products.push({product: product, quantity: 1});
+      this.productsSubject.next(this.products);
+    }
   }
 
   increaseQuantity(productId: number, quantity: number) {
     const index = this.products.findIndex(x => x.product.id === productId);
     this.products[index].quantity += quantity;
+    this.productsSubject.next(this.products);
   }
 
   decreaseQuantity(productId: number, quantity: number) {
     const index = this.products.findIndex(x => x.product.id === productId);
     this.products[index].quantity -= quantity;
+    this.productsSubject.next(this.products);
   }
 
   removeItem(id: number){
     const index = this.products.findIndex(x => x.product.id == id);
     this.products.splice(index, 1);
+    this.productsSubject.next(this.products);
   }
 
   getCartItems(){
     return this.products;
   }
 
-  clearCart(){
+  clearCart() {
     this.products = [];
-    return this.products;
+    this.productsSubject.next(this.products);
   }
 
-  constructor() { }
 }

@@ -7,7 +7,7 @@
           <ng-image-slider #nav
             (imageClick)="changeImage($event)"
             [images]="imageObject"
-            [infinite]="true"
+            [infinite]="false"
             [autoSlide]="0"
             [imagePopup]="false"
             [imageSize]="{width: '25%', height: 120}"
@@ -16,10 +16,6 @@
           </ng-image-slider>
         </div>
       </div>
-
-      <!-- <strong>{{product.images}}</strong>
-      <mat-divider></mat-divider>
-      <strong>{{product.price | currency: 'BRL'}}</strong> -->
     </mat-card-content>
   </mat-card>
 
@@ -40,11 +36,11 @@
         <strong>Prazo de entrega</strong>
         <span>7 dias</span>
       </div>
-      <span class="responsible">Vendido e entregue por Gama Sports</span>
+      <span class="responsible">Vendido e entregue por <strong>Gama Sports</strong></span>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>Comprar</button>
-      <button mat-button color="primary">Adicionar ao carrinho</button>
+      <button mat-button (click)="buyProduct()">Comprar</button>
+      <button mat-button (click)="addToCart()">Adicionar ao carrinho</button>
     </mat-card-actions>
   </mat-card>
   
@@ -53,8 +49,8 @@
       <strong class="title">Informações Adicionais</strong>
       <table>
         <tr>
-          <th>Tamanho</th>
-          <td>{{product.size}}</td>
+          <th>Tamanhos</th>
+          <td>{{product.sizes}}</td>
         </tr>
         <tr>
           <th>Gênero</th>

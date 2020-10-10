@@ -5,9 +5,9 @@ export default class Product {
     description: string;
     price: number;
     installments: number;
-    image: string;
-    images?: string[];
-    size: string;
+    images: string[];
+    sizes: string;
+    availableSizes: string[];
     gender: string;
     material: string;
     color: string;

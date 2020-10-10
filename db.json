@@ -2,141 +2,225 @@
   "products": [
     {
       "id": 1,
-      "description": "Camisa Barcelona Rakuten",
+      "description": "Camisa Barcelona Rakuten Masculina",
       "price": 399.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
       "images": [
-        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
-        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
-        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
-        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg",
-        "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+        "assets/images/products/tshirt-fcb-m-01.jpg",
+        "assets/images/products/tshirt-fcb-m-02.jpg",
+        "assets/images/products/tshirt-fcb-m-03.jpg",
+        "assets/images/products/tshirt-fcb-m-04.jpg",
+        "assets/images/products/tshirt-fcb-m-05.jpg"
       ],
-      "size": "G",
-      "gender": "M",
+      "sizes": "P, M, G e GG",
+      "availableSizes": ["P", "M", "G", "GG"],
+      "gender": "P, M, G e GG",
       "material": "Tecido",
-      "color": "Vermelha com azul",
+      "color": "Vermelho com azul",
       "brand": "Nike"
     },
     {
       "id": 2,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
+      "description": "Camisa Chelsea Feminina - 3º Uniforme",
+      "price": 249.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "images": [
+        "assets/images/products/tshirt-chelsea-f-01.jpg",
+        "assets/images/products/tshirt-chelsea-f-02.jpg",
+        "assets/images/products/tshirt-chelsea-f-03.jpg",
+        "assets/images/products/tshirt-chelsea-f-04.jpg"
+      ],
+      "sizes": "P, M, G e GG",
+      "availableSizes": ["P", "M", "G", "GG"],
+      "gender": "F",
+      "material": "Tecido",
+      "color": "Azul com cinza",
+      "brand": "Nike"
     },
     {
       "id": 3,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
+      "description": "Camisa Brasil 2020 Masculina",
+      "price": 299.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "images": [
+        "assets/images/products/tshirt-brasil-m-01.jpg",
+        "assets/images/products/tshirt-brasil-m-02.jpg",
+        "assets/images/products/tshirt-brasil-m-03.jpg"
+      ],
+      "sizes": "P, M, G e GG",
+      "availableSizes": ["P", "M", "G", "GG"],
+      "gender": "M",
+      "material": "Tecido",
+      "color": "Amarelo e Verde",
+      "brand": "Nike"
     },
     {
       "id": 4,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
+      "description": "Camisa Real Madrid Masculina",
+      "price": 299.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "images": [
+        "assets/images/products/tshirt-rmadrid-m-01.jpg",
+        "assets/images/products/tshirt-rmadrid-m-02.jpg",
+        "assets/images/products/tshirt-rmadrid-m-03.jpg"
+
+      ],
+      "sizes": "P, M, G e GG",
+      "availableSizes": ["P", "M", "G", "GG"],
+      "gender": "M",
+      "material": "Tecido",
+      "color": "Branco",
+      "brand": "Nike"
     },
     {
       "id": 5,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
+      "description": "Chuteira Nike Mercurial Superfly 7",
+      "price": 239.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "images": [
+        "assets/images/products/footbal-boot-nike-mercurial-01.jpg",
+        "assets/images/products/footbal-boot-nike-mercurial-02.jpg",
+        "assets/images/products/footbal-boot-nike-mercurial-03.jpg",
+        "assets/images/products/footbal-boot-nike-mercurial-04.jpg",
+        "assets/images/products/footbal-boot-nike-mercurial-05.jpg"
+      ],
+      "sizes": "37, 38, 39, 40, 41 e 42",
+      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "gender": "M",
+      "material": "Couro",
+      "color": "Laranja",
+      "brand": "Nike"
     },
     {
       "id": 6,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
+      "description": "Chuteira Nike Phantom Venom Club",
+      "price": 179.89,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "images": [
+        "assets/images/products/footbal-boot-nike-phantom-01.jpg",
+        "assets/images/products/footbal-boot-nike-phantom-02.jpg",
+        "assets/images/products/footbal-boot-nike-phantom-03.jpg",
+        "assets/images/products/footbal-boot-nike-phantom-04.jpg",
+        "assets/images/products/footbal-boot-nike-phantom-05.jpg"
+      ],
+      "sizes": "37, 38, 39, 40, 41 e 42",
+      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "gender": "M",
+      "material": "Couro",
+      "color": "Preto e laranja",
+      "brand": "Nike"
     },
     {
       "id": 7,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
+      "description": "Chuteira Adidas Predator 20.3 Low",
+      "price": 199.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "images": [
+        "assets/images/products/footbal-boot-adidas-predator-01.jpg",
+        "assets/images/products/footbal-boot-adidas-predator-02.jpg",
+        "assets/images/products/footbal-boot-adidas-predator-03.jpg",
+        "assets/images/products/footbal-boot-adidas-predator-04.jpg",
+        "assets/images/products/footbal-boot-adidas-predator-05.jpg"
+      ],
+      "sizes": "37, 38, 39, 40, 41 e 42",
+      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "gender": "M",
+      "material": "Couro",
+      "color": "preto",
+      "brand": "Adidas"
     },
     {
       "id": 8,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
+      "description": "Chuteira Futsal Puma Spirit II IC ",
+      "price": 129.99,
       "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "images": [
+        "assets/images/products/footbal-boot-puma-spirit-01.jpg",
+        "assets/images/products/footbal-boot-puma-spirit-02.jpg",
+        "assets/images/products/footbal-boot-puma-spirit-03.jpg",
+        "assets/images/products/footbal-boot-puma-spirit-04.jpg",
+        "assets/images/products/footbal-boot-puma-spirit-05.jpg",
+        "assets/images/products/footbal-boot-puma-spirit-06.jpg"
+      ],
+      "sizes": "37, 38, 39, 40, 41 e 42",
+      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "gender": "M",
+      "material": "Couro",
+      "color": "Laranja e preto",
+      "brand": "Puma"
     },
     {
       "id": 9,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "description": "Camisa Térmica Manga Longa Adams Masculina",
+      "price": 49.99,
+      "installments": 4,
+      "images": [
+        "assets/images/products/tshirt-fitness-adams-m-01.jpg",
+        "assets/images/products/tshirt-fitness-adams-m-02.jpg",
+        "assets/images/products/tshirt-fitness-adams-m-03.jpg",
+        "assets/images/products/tshirt-fitness-adams-m-04.jpg"
+      ],
+      "sizes": "P, M, G e GG",
+      "availableSizes": ["P", "M", "G", "GG"],
+      "gender": "M",
+      "material": "Tecido",
+      "color": "Preto",
+      "brand": "Adams"
     },
     {
       "id": 10,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "description": "Shorts Fitness Rum Basic - Feminino",
+      "price": 29.99,
+      "installments": 2,
+      "images": [
+        "assets/images/products/shorts-fitness-rum-f-01.jpg",
+        "assets/images/products/shorts-fitness-rum-f-02.jpg",
+        "assets/images/products/shorts-fitness-rum-f-03.jpg",
+        "assets/images/products/shorts-fitness-rum-f-04.jpg"
+      ],
+      "sizes": "P, M, G e GG",
+      "availableSizes": ["P", "M", "G", "GG"],
+      "gender": "F",
+      "material": "Tecido",
+      "color": "Lilás",
+      "brand": "Rum"
     },
     {
       "id": 11,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "description": "Tênis Corrida Olympikus Swift - Feminino",
+      "price": 179.99,
+      "installments": 2,
+      "images": [
+        "assets/images/products/sneaker-olympikus-swift-f-01.jpg",
+        "assets/images/products/sneaker-olympikus-swift-f-02.jpg",
+        "assets/images/products/sneaker-olympikus-swift-f-03.jpg",
+        "assets/images/products/sneaker-olympikus-swift-f-04.jpg",
+        "assets/images/products/sneaker-olympikus-swift-f-05.jpg"
+      ],
+      "sizes": "37, 38, 39, 40, 41 e 42",
+      "availableSizes": ["37", "38", "39", "40", "41", "42"],
+      "gender": "F",
+      "material": "Tecido",
+      "color": "Colorido",
+      "brand": "Olympikus"
     },
     {
       "id": 12,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
-    },
-    {
-      "id": 13,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
-    },
-    {
-      "id": 14,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
-    },
-    {
-      "id": 15,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
-    },
-    {
-      "id": 16,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
-    },
-    {
-      "id": 17,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
-    },
-    {
-      "id": 18,
-      "description": "Camisa Barcelona Rakuten",
-      "price": 399.99,
-      "installments": 10,
-      "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_barcelona_2020_jogador_uniforme_titular_3823_1_20190703185610.jpg"
+      "description": "Calção Futebol Adams Futaw Preto - Masculino",
+      "price": 28.99,
+      "installments": 2,
+      "images": [
+        "assets/images/products/shorts-adams-futaw-m-01.jpg",
+        "assets/images/products/shorts-adams-futaw-m-02.jpg",
+        "assets/images/products/shorts-adams-futaw-m-03.jpg",
+        "assets/images/products/shorts-adams-futaw-m-04.jpg"
+      ],
+      "sizes": "P, M, G e GG",
+      "availableSizes": ["P", "M", "G", "GG"],
+      "gender": "M",
+      "material": "Malha",
+      "color": "Preto",
+      "brand": "Adams"
     }
   ],
   "users": [

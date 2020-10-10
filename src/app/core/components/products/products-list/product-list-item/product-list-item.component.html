@@ -1,6 +1,6 @@
-<mat-card>
+<mat-card (click)="goToDetails()">
   <mat-card-content>
-    <img class="imagem" [src]="product.image" />
+    <img class="imagem" [src]="product.images[0]" />
     <div class="product-info">
       <span class="description">{{ product.description }}</span>
       <strong class="price">{{ product.price | currency:'BRL' }}</strong>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import Product from 'src/app/shared/models/Product';
 
 @Component({
@@ -10,13 +11,17 @@ export class ProductListItemComponent implements OnInit {
   @Input() product: Product;
   @Input() name: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   getInstallmentsValue(product: Product): number {
     return product.price / product.installments;
+  }
+
+  goToDetails() {
+    this.router.navigate(['/products/details', this.product.id]);
   }
 
 }

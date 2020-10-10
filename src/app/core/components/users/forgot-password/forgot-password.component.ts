@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailValidator, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ValidationFieldService } from 'src/app/shared/services/validation-field.service';

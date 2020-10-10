@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>Gama Sports</span>
+      <a routerLink="/">Gama Sports</a>
       <div class="search">
         <input type="text" placeholder="Pesquisar" />
         <button mat-icon-button color="primary">
@@ -14,7 +14,7 @@
           <span>Entrar</span>
         </a>
         <button mat-icon-button class="cart" routerLink="/cart">
-          <mat-icon [matBadge]="totalCartItems" matBadgeColor="accent">shopping_cart</mat-icon>
+          <mat-icon [matBadge]="total" matBadgeColor="accent">shopping_cart</mat-icon>
         </button>
       </div>
     </mat-toolbar-row>

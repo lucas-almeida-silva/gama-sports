@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ProductsService } from 'src/app/core/services/products.service';
 import Product from 'src/app/shared/models/Product';
 import { NgImageSliderComponent } from 'ng-image-slider';
+import { CartService } from 'src/app/core/services/cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -19,8 +20,10 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
+    private router: Router,
     private toastrService: ToastrService,
-    private productService: ProductsService) { }
+    private productService: ProductsService,
+    private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getProduct();
@@ -33,18 +36,16 @@ export class ProductDetailsComponent implements OnInit {
       (product: Product) => {
         this.product = product;
         this.mapImageObject();
-        this.image=product.image;
+        this.image=product.images[0];
       },
-      () => this.toastrService.error("Ocorreu um erro ao obter as informações do produto")
+      () => this.toastrService.error('Ocorreu um erro ao obter as informações do produto')
     )
   }
 
   mapImageObject() {
-    this.product.images?.forEach(image => {
+    this.product.images.forEach(image => {
       this.imageObject.push({image, thumbImage: image})
     });
-
-    console.log(this.imageObject)
   }
 
   showImagesPopup() {
@@ -57,6 +58,16 @@ export class ProductDetailsComponent implements OnInit {
 
   getInstallmentsValue(product: Product): number {
     return product.price / product.installments;
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.product);
+    this.toastrService.success('Produto adicionado ao carrinho!');
+  }
+
+  buyProduct() {
+    this.cartService.addToCart(this.product);
+    this.router.navigateByUrl('/cart');
   }
 
 }
