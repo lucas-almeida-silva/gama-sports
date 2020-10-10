@@ -67,7 +67,7 @@ Access API at http://localhost:3000/
 
 ```bash
 # Go to web folder
-$ cd proffy/web
+$ cd gama-sports
 
 # Run Aplication
 $ ng serve
