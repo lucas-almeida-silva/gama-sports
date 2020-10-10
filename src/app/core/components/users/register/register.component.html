@@ -26,7 +26,7 @@
           <mat-error *ngIf="validationFieldService.hasError(registerForm.get('birthdate'), 'invalidDate')">Data inválida</mat-error>
         </mat-form-field>
 
-        <div class="gender">
+        <div class="gender" [ngStyle]="{'margin-bottom': validationFieldService.hasError(registerForm.get('gender'), 'required') ? '0' : '2rem' }">
           <label>Sexo</label>
           <mat-radio-group formControlName="gender">
             <mat-radio-button value="F">Masculino</mat-radio-button>

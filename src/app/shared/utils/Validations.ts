@@ -68,14 +68,18 @@ export default class Validations {
   static validateDate(dateControl: AbstractControl) {
     const date = dateControl.value;
 
-    if(date) {
+    if(date) {      
+      const dateMoment = moment(date, 'DD/MM/YYYY');
+
       if(!(date.length === 10)) 
         return { invalidDate: true};
+
+      if(dateMoment.isSame(moment(), 'day') || dateMoment.isAfter(moment(), 'day'))
+        return { invalidDate: true};
       
-      if(!moment(date, 'DD/MM/YYYY').isValid())
+      if(!dateMoment.isValid())
         return { invalidDate: true};
     }
-    console.log(date)
     return null;
   } 
 }

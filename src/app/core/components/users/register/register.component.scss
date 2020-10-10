@@ -22,11 +22,11 @@
       .gender {
         display: flex;
         flex-direction: column;
-        margin: 2.8rem 0 1rem 0;
+        margin-top: 2.4rem;
 
         label {
           font-size: 1.8rem;
-          margin-bottom: 1.4rem;
+          margin-bottom: 1.2rem;
           color: rgba(0,0,0,.6);
         }
 
@@ -40,7 +40,8 @@
 
         .mat-error {
           font-size: 1.6rem;
-          margin-top: .8rem;
+          margin-top: .7rem;
+          margin-bottom: 0;
         }
       }
     }
