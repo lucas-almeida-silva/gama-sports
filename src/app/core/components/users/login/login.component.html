@@ -1,6 +1,6 @@
 <div id="login-container">
   <mat-card>
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
       <mat-card-content>
         <mat-label>
           <mat-icon>lock</mat-icon>
