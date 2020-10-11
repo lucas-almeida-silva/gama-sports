@@ -1,71 +1,82 @@
-.mat-card {
+.product-list-item {
+  text-decoration: none;
+
+  .mat-card {
     width: 100%;
     height: 100%;
     padding: 2.4rem 1.6rem;
     cursor: pointer;
 
-    .mat-card-content {
-        max-width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+    &:hover {
+      transform: scale(1.1);
+      border: solid 1px #ccc;
+      z-index: 2;
+    }
 
-        .imagem {
-            width: 12rem;
-            height: 14rem;
+    .mat-card-content {
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .imagem {
+        width: 12rem;
+        height: 14rem;
+      }
+
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2.4rem;
+
+        .description {
+          font-size: 1.6rem;
+          margin-top: 1rem;
         }
+
+        .price {
+          font-size: 2.4rem;
+          margin-top: 3rem;
+        }
+
+        .installments {
+          margin-top: 0.5rem;
+        }
+      }
+
+      img {
+        width: 18rem;
+        height: 20rem;
+      }
+
+      @media (min-width: 530px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         .product-info {
-            display: flex;
-            flex-direction: column;
-            margin-left: 2.4rem;
+          align-items: center;
+          justify-content: center;
+          margin-left: 0;
 
-            .description {
-                font-size: 1.6rem;
-                text-align: center;
-                margin-top: 1rem;
-            }
+          .description {
+            text-align: center;
+          }
 
-            .price { 
-                font-size: 2.4rem;
-                margin-top: 3rem;
-            }
-
-            .installments {
-                margin-top: .5rem;
-            }
-
+          .installments {
+            margin-top: 0.8rem;
+          }
         }
+      }
 
-        img {
-            width: 18rem;
-            height: 20rem;
+      @media (min-width: 700px) {
+        .product-info {
+          .description {
+            font-size: 1.8rem;
+          }
         }
-
-        @media(min-width: 530px) {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .product-info {
-                align-items: center;
-                justify-content: center;
-                margin-left: 0;
-
-                .installments {
-                    margin-top: .8rem;
-                }       
-            }
-        }
-
-        @media(min-width: 700px) {
-            .product-info {
-                .description {
-                    font-size: 1.8rem;
-                }
-            }
-        }
+      }
     }
-    
+  }
 }

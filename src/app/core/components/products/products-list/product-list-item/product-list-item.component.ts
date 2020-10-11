@@ -19,9 +19,4 @@ export class ProductListItemComponent implements OnInit {
   getInstallmentsValue(product: Product): number {
     return product.price / product.installments;
   }
-
-  goToDetails() {
-    this.router.navigate(['/products/details', this.product.id]);
-  }
-
 }
