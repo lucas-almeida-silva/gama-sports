@@ -77,8 +77,8 @@ Access the application at http://localhost:4200/
 # :man_technologist: Developers
   
   - [Lucas Almeida](https://github.com/lucas-almeida-silva)
-  - [Leonardo Silva](https://github.com/brunohyoji)
-  - [Bruno Hyoji](https://github.com/)
+  - [Leonardo Silva](https://github.com)
+  - [Bruno Hyoji]((https://github.com/brunohyoji)
 
 # :pencil: License
 
