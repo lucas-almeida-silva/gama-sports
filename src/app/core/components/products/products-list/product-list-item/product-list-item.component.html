@@ -1,12 +1,12 @@
-<a class="product-list-item" [routerLink]="['/products/details/', product.id]">
-<mat-card>
-  <mat-card-content>
-    <img class="imagem" [src]="product.images[0]" />
-    <div class="product-info">
-      <span class="description">{{ product.description }}</span>
-      <strong class="price">{{ product.price | currency:'BRL' }}</strong>
-      <span class="installments">{{ product.installments }}x de {{getInstallmentsValue(product) | currency:'BRL'}}</span>
-    </div>
-  </mat-card-content>
-</mat-card>
+<a class="product-list-item" [routerLink]="['/products/details/', product.product_id]">
+  <mat-card>
+    <mat-card-content>
+      <img class="imagem" [src]="product.images[0].url" />
+      <div class="product-info">
+        <span class="description">{{ product.description }}</span>
+        <strong class="price">{{ product.price | currency:'BRL' }}</strong>
+        <span class="installments">{{ product.installments }}x de {{getInstallmentsValue(product) | currency:'BRL'}}</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </a>

@@ -17,17 +17,14 @@ export class CartItemComponent implements OnInit {
   }
   
   increaseQuantity() {
-    this.cartService.increaseQuantity(this.cartItem.product.id, 1, this.cartItem.size);
+    this.cartService.increaseQuantity(this.cartItem.product.product_id, 1, this.cartItem.size);
   }
 
   decreaseQuantity() {
-    this.cartService.decreaseQuantity(this.cartItem.product.id, 1, this.cartItem.size);
+    this.cartService.decreaseQuantity(this.cartItem.product.product_id, 1, this.cartItem.size);
   }
 
   removeCartItem() {
-    this.cartService.removeItem(this.cartItem.product.id, this.cartItem.size);
+    this.cartService.removeItem(this.cartItem.product.product_id, this.cartItem.size);
   }
-
-  addCart
-
 }

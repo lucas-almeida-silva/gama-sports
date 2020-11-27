@@ -16,7 +16,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Senha</mat-label>
           <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" />
-          <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword">
+          <button type="button" mat-icon-button matSuffix (click)="hidePassword = !hidePassword">
               <mat-icon class="icon" color="primary">{{hidePassword ? 'visibility' : 'visibility_off'}}</mat-icon>
           </button>
           <mat-error *ngIf="validationFieldService.hasError(loginForm.get('password'), 'required')">Campo obrigatório</mat-error>

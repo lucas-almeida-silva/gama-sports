@@ -1,8 +1,9 @@
 .mat-toolbar {
     width: 100%;
     padding: 2rem 1.4rem;
+    height: 16rem;
 
-    .mat-toolbar-row:nth-child(1) {
+    .mat-toolbar-row {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -46,7 +47,7 @@
             grid-area: actions;
             justify-self: end;
 
-            .user {
+            .sigin {
                 .mat-icon {
                     margin-right: 0.5em;
                     font-size: 4rem;
@@ -56,6 +57,17 @@
                 span {
                     font-size: 1.8rem;
                 }
+            }
+
+            .user {
+              span {
+                  font-size: 1.8rem;
+              }
+
+              .mat-icon {
+                font-size: 3.5rem;
+                vertical-align: top;
+              }
             }
 
             .cart {
@@ -71,6 +83,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 2rem 0;
+            height: 12rem;
 
             .search {
                 margin: 0 1.6rem 0 4rem;

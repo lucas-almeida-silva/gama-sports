@@ -4,7 +4,7 @@
       <div class="product-images">
         <img class="image" [src]="image" (click)="showImagesPopup()">
         <div class="slider">
-          <ng-image-slider #nav
+          <ng-image-slider #imagesCarrousel
             (imageClick)="changeImage($event)"
             [images]="imageObject"
             [infinite]="false"
@@ -41,7 +41,7 @@
       <div class="size">
         <strong>Tamanho</strong>
         <mat-radio-group [(ngModel)]="productSize">
-          <mat-radio-button color="primary" *ngFor="let size of product.availableSizes" [value]="size">{{size}}</mat-radio-button>
+          <mat-radio-button color="primary" *ngFor="let size of availableProductSizes()" [value]="size">{{size}}</mat-radio-button>
         </mat-radio-group>
       </div>
     </mat-card-content>

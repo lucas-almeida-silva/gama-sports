@@ -5,7 +5,6 @@ import { ProductsService } from 'src/app/core/services/products.service';
 import Product from 'src/app/shared/models/Product';
 import { NgImageSliderComponent } from 'ng-image-slider';
 import { CartService } from 'src/app/core/services/cart.service';
-import { ValidationFieldService } from 'src/app/shared/services/validation-field.service';
 
 @Component({
   selector: 'app-product-details',
@@ -16,7 +15,7 @@ export class ProductDetailsComponent implements OnInit {
   product: Product = new Product();
   image: string;
   productSize: string;
-  @ViewChild('nav') slider: NgImageSliderComponent;
+  @ViewChild('imagesCarrousel') slider: NgImageSliderComponent;
 
   imageObject: Array<object> = [];
 
@@ -38,7 +37,7 @@ export class ProductDetailsComponent implements OnInit {
       (product: Product) => {
         this.product = product;
         this.mapImageObject();
-        this.image=product.images[0];
+        this.image = product.images[0].url;
       },
       () => this.toastrService.error('Ocorreu um erro ao obter as informações do produto')
     )
@@ -46,7 +45,7 @@ export class ProductDetailsComponent implements OnInit {
 
   mapImageObject() {
     this.product.images.forEach(image => {
-      this.imageObject.push({image, thumbImage: image})
+      this.imageObject.push({ image: image.url, thumbImage: image.url })
     });
   }
 
@@ -84,6 +83,12 @@ export class ProductDetailsComponent implements OnInit {
       return false;
     }
     return true;
+  }
+
+  availableProductSizes() {
+    const availableSizes = this.product.availableSizes?.split(", ");
+
+    return availableSizes;
   }
 
 }

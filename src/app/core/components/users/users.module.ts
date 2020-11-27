@@ -12,7 +12,13 @@ import { RecoverPasswordComponent } from './recover-password/recover-password.co
 import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, UserComponent, ForgotPasswordComponent, RecoverPasswordComponent],
+  declarations: [
+    LoginComponent, 
+    RegisterComponent, 
+    UserComponent, 
+    ForgotPasswordComponent, 
+    RecoverPasswordComponent
+  ],
   imports: [
     CommonModule,
     UsersRoutingModule,

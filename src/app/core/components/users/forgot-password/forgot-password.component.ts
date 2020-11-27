@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { ForgotPasswordService } from 'src/app/core/services/forgot-password.service';
+import ForgotPassword from 'src/app/shared/models/ForgotPassword';
 import { ValidationFieldService } from 'src/app/shared/services/validation-field.service';
 
 @Component({
@@ -16,7 +18,8 @@ export class ForgotPasswordComponent implements OnInit {
     public validationFieldService: ValidationFieldService,
     private formBuilder: FormBuilder,
     private toastrService: ToastrService,
-    private router: Router) { }
+    private router: Router,
+    private forgotPasswordService: ForgotPasswordService) { }
 
   ngOnInit(): void {
     this.buildForm();
@@ -32,8 +35,21 @@ export class ForgotPasswordComponent implements OnInit {
     this.forgotPasswordForm.markAllAsTouched();
 
     if(this.forgotPasswordForm.valid) {
-      this.toastrService.success("Confira o seu e-mail para recuperar seu acesso");
-      this.router.navigateByUrl('/users/recover-password');
+      const email = this.forgotPasswordForm.value as ForgotPassword;
+
+      this.forgotPasswordService.postEmail(email).subscribe(
+        () => {
+          this.toastrService.success("E-mail enviado com sucesso! Confira o seu e-mail para recuperar seu acesso.");
+          this.router.navigateByUrl('/users/login');
+        },
+        (error) => {
+          if(error.error.message) {
+            this.toastrService.error(error.error.message);
+          } else {
+            this.toastrService.error("Ocorreu um erro ao enviar o e-mail, tente novamente.");
+          }
+        }
+      );
     }
   }
 }

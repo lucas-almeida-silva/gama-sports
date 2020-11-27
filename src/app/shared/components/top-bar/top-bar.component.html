@@ -2,59 +2,29 @@
     <mat-toolbar-row>
       <a routerLink="/">Gama Sports</a>
       <div class="search">
-        <input type="text" placeholder="Pesquisar" />
-        <button mat-icon-button color="primary">
+        <input type="text" placeholder="Pesquisar" [(ngModel)]="search" (keyup)="onPressKey($event)" />
+        <button mat-icon-button color="primary" (click)="searchProducts()">
           <mat-icon color="primary">search</mat-icon>
         </button>
       </div>
 
       <div class="actions">
-        <a class="user" mat-button routerLink="/users/login">
+        <a *ngIf="!isUserLogged()" class="sigin" mat-button routerLink="/users/login">
           <mat-icon>account_circle</mat-icon>
           <span>Entrar</span>
         </a>
+        <button *ngIf="isUserLogged()" class="user" mat-button [matMenuTriggerFor]="userMenu">
+          <span>{{ getUserName() }}</span>
+          <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #userMenu>
+          <button mat-menu-item (click)="logout()">
+            <span>Sair</span>
+          </button>
+        </mat-menu>
         <button mat-icon-button class="cart" routerLink="/cart">
-          <mat-icon [matBadge]="total" matBadgeColor="accent">shopping_cart</mat-icon>
+          <mat-icon [matBadge]="getTotal()" matBadgeColor="accent">shopping_cart</mat-icon>
         </button>
       </div>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row>
-      <div class="departments">
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>menu</mat-icon>
-          <span class="filter-departments">Todos os departamentos</span>
-        </button>
-        <div class="some-departments">
-          <button mat-button>
-            <span>Infantil</span>
-          </button>
-          <button mat-button>
-            <span>Calças</span>
-          </button>
-          <button mat-button>
-            <span>Blusas</span>
-          </button>
-          <button mat-button>
-            <span>Chuteiras</span>
-          </button>
-        </div>
-
-      </div>
-
-      <mat-menu #menu>
-        <button mat-menu-item>
-          <span>Tênis</span>
-        </button>
-        <button mat-menu-item>
-          <span>Chuteiras</span>
-        </button>
-        <button mat-menu-item>
-          <span>Camisetas</span>
-        </button>
-        <button mat-menu-item>
-          <span>Blusas</span>
-        </button>
-      </mat-menu>
     </mat-toolbar-row>
 </mat-toolbar>

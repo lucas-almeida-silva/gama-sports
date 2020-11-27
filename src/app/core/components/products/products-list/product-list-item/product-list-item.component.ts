@@ -9,8 +9,7 @@ import Product from 'src/app/shared/models/Product';
 })
 export class ProductListItemComponent implements OnInit {
   @Input() product: Product;
-  @Input() name: string;
-
+  
   constructor(private router: Router) { }
 
   ngOnInit(): void {

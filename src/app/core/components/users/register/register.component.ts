@@ -6,7 +6,6 @@ import { UsersService } from 'src/app/core/services/users.service';
 import User from 'src/app/shared/models/User';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { LoaderService } from 'src/app/shared/services/loader.service';
 
 @Component({
   selector: 'app-register',
@@ -26,8 +25,7 @@ export class RegisterComponent implements OnInit {
     private formBuilder: FormBuilder, 
     private router: Router,
     private toastrService: ToastrService,
-    private usersService: UsersService,
-    private loaderService: LoaderService) {}
+    private usersService: UsersService) {}
 
   ngOnInit(): void {
     this.buildForm();
@@ -42,7 +40,7 @@ export class RegisterComponent implements OnInit {
       gender: ['', Validators.required],
       phone: ['', [Validators.required, Validators.pattern('^((\(([1-9]{2})\))|([1-9]{2}))([ .-]?)(9[0-9]|[0-9])[0-9]{3}([ .-]?)[0-9]{4}$')]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      password: ['', [Validators.required, Validators.pattern("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")]],
       confirmPassword: ['', Validators.required],
     }, { validator: Validations.passwordsMatch('password', 'confirmPassword')})
   }
@@ -59,14 +57,20 @@ export class RegisterComponent implements OnInit {
           this.toastrService.success("Cadastro efetuado com sucesso! Agora basta efetuar o login e aproveitar!");
           this.router.navigateByUrl('/users/login');
         },
-        () => this.toastrService.error("Ocorreu um erro ao efetuar o cadastro, tente novamente."),
+        (error) => {
+          if(error.error.message) {
+            this.toastrService.error(error.error.message);
+          } else {
+            this.toastrService.error("Ocorreu um erro ao efetuar o cadastro, tente novamente.");
+          }
+        }
       );
     }
   }
 
   setDynamicMaskForPhone() {
     this.registerForm.controls.phone.valueChanges.subscribe(value => {
-      this.phoneMask = (value.length < 11)? "(00) 0000-00009": "(00) 00000-0000";
+      this.phoneMask = (value.length < 11) ? "(00) 0000-00009" : "(00) 00000-0000";
     });
   }
 }
