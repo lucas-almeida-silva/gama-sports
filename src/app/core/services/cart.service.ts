@@ -103,7 +103,7 @@ export class CartService {
     const { token } = this.authService.getUser();
 
     return this.httpClient.post(this.baseURL, cart, {
-      headers: new HttpHeaders().set('Authorization', token)
+      headers: new HttpHeaders().set('x-access-token', token)
     });
   }
 }

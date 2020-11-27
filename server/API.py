@@ -79,7 +79,6 @@ class Cart(db.Model, Base):
     create_dttm = db.Column(db.DateTime, default=datetime.datetime.utcnow)
     user = db.relationship('User', backref='images')
     products = db.relationship('Product', secondary = 'cart_products')
-    user = db.relationship('User', backref='images')
 
 class CP(db.Model, Base):
     __tablename__ = 'cart_products'
@@ -317,21 +316,14 @@ def get_product(product_id):
 
 @app.route('/cart', methods=['POST'])
 @cross_origin(supports_credentials=True)
-def create_cart():
+@token_required
+def create_cart(current_user):
 
     data = request.get_json()
 
-    #cart_verify = Cart.query.filter_by(user_id=data['clientId']).first()
-
-    #if cart_verify:
-    #    db.session.delete(cart_verify)
-    #    db.session.commit()
-
-    new_cart = Cart(total_amount=data['total'], user_id=data['clientId'])
-    db.session.add(new_cart)
+    cart = Cart(total_amount=data['total'], user_id=data['clientId'])
+    db.session.add(cart)
     db.session.commit()
-
-    cart= Cart.query.filter_by(user_id=data['clientId']).first()
 
     if not cart:
         return jsonify({'message' : 'Problema na inclusão do carrinho'}), 400
