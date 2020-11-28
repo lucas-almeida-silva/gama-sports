@@ -161,7 +161,7 @@ def create_user():
         return jsonify({'message' : 'Usuário menor de idade!'}), 400
     elif str(data['gender']) != "M" and str(data['gender']) != "F":
         return jsonify({'message' : 'Gênero inválido!'}), 400
-    elif not str(data['phone']).isdigit() or len(str(data['phone'])) < 11:
+    elif not str(data['phone']).isdigit() or len(str(data['phone'])) < 10:
         return jsonify({'message' : 'Telefone inválido!'}), 400
     elif not validate_email(str(data['email'])):
         return jsonify({'message' : 'Email inválido!'}), 400
