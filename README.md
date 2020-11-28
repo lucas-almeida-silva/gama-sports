@@ -17,7 +17,9 @@ This is a project for a virtual sporting goods store, developed for the Web Prog
 
 ### 📦 API
 
-  - Json-Server
+  - Python
+  - Flask
+  - SQLite
 
 ### :desktop_computer: Front-end
 
@@ -42,26 +44,43 @@ This is a project for a virtual sporting goods store, developed for the Web Prog
 $ git clone https://github.com/lucas-almeida-silva/game-sports.git
 ```
 
-You need to have Angular CLI installed.
+You need to have Angular CLI andn Python installed.
 
 ```bash
 # Install Angular CLI
 $ npm install -g angular-cli
 ```
 
+Install Python 3.8.1:
+
+https://www.python.org/downloads/release/python-381/
+
+
 ### 📦 Run API
 
 ```bash
-# Go to project folder
-$ cd gama-sports
+# Install dependencies
+$ pip install Flask
+$ pip install SQLAlchemy
+$ pip install flask_sqlachemy
+$ pip install uuid
+$ pip install Werkzeug
+$ pip install PyJWT
+$ pip install Flask-Mail
+$ pip install bcrypt
+$ pip install validate_email
+$ pip install validate_docbr
+$ pip install flask-marshmallow
+$ pip install marshmallow-sqlalchemy
+$ pip install flask-cors
 
-# Install Dependencies
-$ npm install
+# Go to server folder
+$ cd gama-sports/server
 
 # Run back-end
-$ json-server --watch db.json
+$ python API.py
 ```
-Access API at http://localhost:3000/
+Access API at http://localhost:5000/
 
 ### :computer: Run Application
 
@@ -74,10 +93,22 @@ $ ng serve
 ```
 Access the application at http://localhost:4200/
 
+## Run Application and API at the same time
+
+There is a command configured to run the application and the API at the same time.
+
+```bash
+# Go to web folder
+$ cd gama-sports
+
+# Run aplication and server
+$ npm run dev
+```
+
 # :man_technologist: Developers
   
   - [Lucas Almeida](https://github.com/lucas-almeida-silva)
-  - [Leonardo Silva](https://github.com)
+  - [Leonardo Silva](https://github.com/leonardosilva07)
   - [Bruno Hyoji](https://github.com/brunohyoji)
 
 # :pencil: License
