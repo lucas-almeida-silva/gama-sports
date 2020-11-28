@@ -142,9 +142,6 @@ def get_one_user(current_user, public_id):
     user_data['gender'] = user.gender
     user_data['phone'] = user.phone
     user_data['email'] = user.email
-    user_data['password'] = user.password
-    user_data['passwordResetToken'] = str(user.passwordResetToken)
-    user_data['passwordResetExpires'] = user.passwordResetExpires
 
     return jsonify({'user' : user_data}), 200
 
